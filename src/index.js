@@ -15,7 +15,7 @@ class App extends React.Component {
         <header>
           <nav>
             <ul>
-              <li className="active"><Link to="app">Dashboard</Link></li>
+              <li><Link to="dashboard">Dashboard</Link></li>
               <li><Link to="inbox">Inbox</Link></li>
               <li><Link to="calendar">Calendar</Link></li>
             </ul>
@@ -29,7 +29,7 @@ class App extends React.Component {
 
 let routes = (
   <Route name="app" path="/" handler={App}>  
-    <DefaultRoute handler={Dashboard} />
+    <DefaultRoute name="dashboard" handler={Dashboard} />
     <Route name="inbox"  handler={Inbox}>
       <Route name="message" path=":messageId" handler={InboxMessage} />
       <DefaultRoute handler={InboxStats} />
