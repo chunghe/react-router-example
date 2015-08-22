@@ -18,7 +18,6 @@ class App extends React.Component {
             </ul>
           </nav>
         </header>
-        <h2>hello world</h2>
         <RouteHandler/>
       </div>
     );
