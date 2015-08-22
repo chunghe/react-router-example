@@ -11,7 +11,7 @@ npm startd
 open http://localhost:3000
 ```
 
-Now edit `src/App.js`.  
+Now edit `src/index.js`.  
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
 ### Linting
