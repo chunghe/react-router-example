@@ -1,9 +1,11 @@
 import React from 'react';
 import Router, { DefaultRoute, NotFoundRoute, Link, Route, RouteHandler } from 'react-router';
-import Inbox from './components/inbox';
-import Calendar from './components/calendar';
-import Dashboard from './components/dashboard';
+import Inbox from './components/Inbox';
+import Calendar from './components/Calendar';
+import Dashboard from './components/Dashboard';
 import NotFound from './components/NotFound';
+import InboxMessage from './components/InboxMessage';
+import InboxStats from './components/InboxStats';
 
 
 class App extends React.Component {
@@ -28,7 +30,10 @@ class App extends React.Component {
 let routes = (
   <Route name="app" path="/" handler={App}>  
     <DefaultRoute handler={Dashboard} />
-    <Route name="inbox"  handler={Inbox} />
+    <Route name="inbox"  handler={Inbox}>
+      <Route name="message" path=":messageId" handler={InboxMessage} />
+      <DefaultRoute handler={InboxStats} />
+    </Route>
     <Route name="calendar" handler={Calendar} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
