@@ -5,7 +5,9 @@ class InboxMessage extends React.Component {
 
   render() {
     return (
-      <h3>InboxMessage component</h3>
+      <div id="message-content">
+        <p>displaying content of message id: {this.props.params.messageId}</p>
+      </div>
     )
   }
 }

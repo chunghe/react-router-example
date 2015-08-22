@@ -1,11 +1,17 @@
 
 import React from 'react';
+import {RouteHandler} from 'react-router';
+import Messages from './messages';
 
 class Inbox extends React.Component {
 
   render() {
     return (
-      <h3>Inbox component</h3>
+      <div>
+        <h3>Inbox component</h3>
+        <Messages />
+        <RouteHandler />
+      </div>
     )
   }
 }
